@@ -2,14 +2,14 @@ import random
 import time
 
 def displayIntro():
-    print('''you are a skilled Investor''')
+    print('''You are a skilled Investor!''')
     print()
 
 
 def chooseInvesting():
     instrument = '' #empty string
-    while instrument != 'Business' and instrument != 'Stock':
-        print('Which instrument you will invest?(press Business or Stock)')
+    while instrument != '1' and instrument != '2':
+        print('Which instrument you will invest?(press 1 for Business or 2 for Stock)')
         instrument = input()
 
     return instrument
@@ -17,7 +17,7 @@ def chooseInvesting():
 def checkInstrument(chooseInvesting):
     print('You send your money...')
     time.sleep(2)
-    print('make some trades...')
+    print('Make some trades...')
     time.sleep(2)
     print('Market opens and...')
     print()
@@ -33,8 +33,8 @@ def checkInstrument(chooseInvesting):
 playAgain = 'yes'
 while playAgain == 'yes' or playAgain == 'y':
     displayIntro()
-    checkInstrument = chooseInvesting()
-    checkInstrument(caveNumber)
+    checkNumber = chooseInvesting()
+    checkInstrument(checkNumber)
 
 
     print('Test your luck one more time? (yes or no)')
