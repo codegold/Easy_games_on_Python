@@ -56,7 +56,7 @@ def getBoardCopy(board):
         return boardCopy
 
 def isSpaceFree(board, move):
-    # Returns true if move in free cell.
+    # Returns true if move made in free cell.
     return board[move] == ' '
 
 def getPlayerMove(board):
@@ -104,7 +104,7 @@ def getComputerMove(board, computerLetter):
             if isWinner(boardCopy, playerLetter):
                 return i
 
-    # Trying to busy one of corners, if there is free.
+    # Trying to take one of corners, if there is free.
     move = chooseRandomMoveFromList(board, [1, 3, 7, 9])
     if move != None:
         return move
@@ -128,7 +128,7 @@ print('Game "Tic Tac Toe"')
 
 while True:
     # Reboot board.
-    theBoard = [' '] * 10
+    theBoard = [' '] * 10 #instead of ' ', ' ', ten times
     playerLetter, computerLetter = inputPlayerLetter()
     turn = whoGoesFirst()
     print('' + turn + ' moves first.')
